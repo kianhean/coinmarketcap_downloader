@@ -52,5 +52,7 @@ if __name__ == "__main__":
     # Download all Historical Data
     currencies = all_currencies()
 
+    today = pd.to_datetime('today').strftime('%Y%m%d')
+
     for currency in currencies:
-        download_data(currency, '20000101', '20181231')
+        download_data(currency, '20000101', today)
