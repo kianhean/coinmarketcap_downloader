@@ -2,6 +2,11 @@ import pandas as pd
 
 
 def all_currencies():
+    """Get List of all Currencies
+    
+    Returns:
+        [List] -- [List of all Currencies]
+    """
 
     url = 'https://coinmarketcap.com/all/views/all/'
     df = pd.read_html(url, attrs = {'id': 'currencies-all'})[0]
@@ -16,6 +21,13 @@ def all_currencies():
     return coins
 
 def download_data(currency, start_date, end_date):
+    """Download Historical Data to File
+    
+    Arguments:
+        currency {[str]} -- [currency of crypto]
+        start_date {[str]} -- [date yyyymmdd]
+        end_date {[str]} -- [date yyyymmdd]
+    """
 
     print("Running " + currency)
 
@@ -36,6 +48,7 @@ def download_data(currency, start_date, end_date):
 
 
 if __name__ == "__main__":
+
     # Download all Historical Data
     currencies = all_currencies()
 
