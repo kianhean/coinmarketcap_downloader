@@ -4,4 +4,6 @@
 
 ## TODO
 
+Fix bug with parsing ~ 150 coins
+
 Make Download Async
