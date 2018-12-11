@@ -66,5 +66,5 @@ if __name__ == "__main__":
         my_file = Path('data/' + currency + '.csv')
 
         if my_file.is_file() == False:
-            time.sleep(2)
+            time.sleep(2) #website now stops downloads faster than this :(
             download_data(currency, '20000101', today)
